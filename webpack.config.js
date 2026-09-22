@@ -21,7 +21,12 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          { loader: "css-loader", options: { url: false } },
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -30,6 +35,7 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+        options: { sources: false },
       },
     ],
   },
@@ -37,6 +43,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: './assets/', to: './assets/' },
+        { from: path.resolve(__dirname, 'picture'), to: './picture/' },
+        { from: path.resolve(__dirname, 'video'), to: './video/' },
       ],
     }),
     new HtmlWebpackPlugin({

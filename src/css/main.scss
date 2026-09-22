@@ -252,7 +252,10 @@ a {
 
 .hero-image {
     z-index: -2;
-    background: url('picture/%E5%8D%B0%E5%B0%BC/f534b6f0387027fe4b9366a15e5f37b6.jpg') center / cover no-repeat;
+    background-image: var(--hero-image, url('picture/%E5%8D%B0%E5%B0%BC/f534b6f0387027fe4b9366a15e5f37b6.jpg'));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transform: scale(1.01);
     animation: hero-breathe 12s ease-in-out infinite alternate;
 }
@@ -725,7 +728,11 @@ h2 em {
 
 .journal-image {
     z-index: -2;
-    background: url('picture/Chicago/552aa6dd833e1150059cbe533dca3dd8.jpg') center / cover fixed no-repeat;
+    background-image: var(--journal-image, url('picture/Chicago/552aa6dd833e1150059cbe533dca3dd8.jpg'));
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .journal-overlay {

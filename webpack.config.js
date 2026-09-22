@@ -53,7 +53,8 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
+    clean: true,
     path: path.resolve(__dirname, "build"),
   },
 };

@@ -1,3 +1,6 @@
+const siteBase = `${window.location.origin}${window.location.pathname.endsWith('/') ? window.location.pathname : `${window.location.pathname}/`}`;
+const assetUrl = (path) => new URL(path, siteBase).toString();
+
 const collections = [
     {
         id: 'chicago',
@@ -109,6 +112,22 @@ const modalIndex = document.querySelector('[data-modal-index]');
 const modalTitle = document.querySelector('[data-modal-title]');
 const modalDescription = document.querySelector('[data-modal-description]');
 
+document.documentElement.style.setProperty(
+    '--hero-image',
+    `url("${assetUrl('picture/%E5%8D%B0%E5%B0%BC/f534b6f0387027fe4b9366a15e5f37b6.jpg')}")`,
+);
+document.documentElement.style.setProperty(
+    '--journal-image',
+    `url("${assetUrl('picture/Chicago/552aa6dd833e1150059cbe533dca3dd8.jpg')}")`,
+);
+
+const journalVideo = document.querySelector('[data-video]');
+if (journalVideo) {
+    journalVideo.poster = assetUrl(journalVideo.dataset.poster);
+    journalVideo.querySelector('source').src = assetUrl(journalVideo.dataset.video);
+    journalVideo.load();
+}
+
 function renderCarousel() {
     const stage = document.querySelector('[data-carousel-stage]');
     const total = document.querySelector('[data-carousel-total]');
@@ -119,7 +138,7 @@ function renderCarousel() {
             (slide, index) => `
                 <article class="carousel-slide${index === 0 ? ' is-current' : ''}" data-slide="${index}">
                     <div class="carousel-photo carousel-photo-${slide.aspect}">
-                        <img src="${slide.src}" alt="${slide.title}" />
+                        <img src="${assetUrl(slide.src)}" alt="${slide.title}" />
                     </div>
                     <div class="carousel-meta">
                         <p class="carousel-region">${slide.region}</p>
@@ -165,7 +184,7 @@ function renderRegions() {
                                 (photo, photoIndex) => `
                                     <button class="photo-card${photoIndex === 0 ? ' photo-card-featured' : ''}" type="button"
                                         data-photo="${collection.id}-${photoIndex}" aria-label="View ${photo.title}">
-                                        <img src="${photo.src}" alt="${photo.title}" loading="${collectionIndex === 0 && photoIndex < 2 ? 'eager' : 'lazy'}" />
+                                        <img src="${assetUrl(photo.src)}" alt="${photo.title}" loading="${collectionIndex === 0 && photoIndex < 2 ? 'eager' : 'lazy'}" />
                                         <span class="photo-card-overlay">
                                             <span>${String(photoIndex + 1).padStart(2, '0')}</span>
                                             <b>${photo.title}</b>
@@ -191,7 +210,7 @@ function renderRegions() {
 }
 
 function openModal(collection, photo, photoIndex) {
-    modalImage.src = photo.src;
+    modalImage.src = assetUrl(photo.src);
     modalImage.alt = photo.title;
     modalRegion.textContent = collection.name;
     modalIndex.textContent = `${String(photoIndex + 1).padStart(2, '0')} / ${String(collection.photos.length).padStart(2, '0')}`;

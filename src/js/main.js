@@ -6,27 +6,27 @@ const collections = [
         note: 'The city turns on after dark',
         photos: [
             {
-                src: '/picture/Chicago/ed7d9e014f83fe03a16c5a9f157941fd.jpg',
+                src: 'picture/Chicago/ed7d9e014f83fe03a16c5a9f157941fd.jpg',
                 title: 'Theatre District After Dark',
                 description: 'The theatre marquee, a late bus, and a crowd that has not gone home yet.',
             },
             {
-                src: '/picture/Chicago/a5cd8208fdaa304523490ab062cdb836.jpg',
+                src: 'picture/Chicago/a5cd8208fdaa304523490ab062cdb836.jpg',
                 title: 'Between Buildings',
                 description: 'There is always a small piece of sky between buildings.',
             },
             {
-                src: '/picture/Chicago/4a6f0b0da8b8aef9baf145b71aedab44.jpg',
+                src: 'picture/Chicago/4a6f0b0da8b8aef9baf145b71aedab44.jpg',
                 title: 'Warm Windows',
                 description: 'Night turns every lit window into a small story.',
             },
             {
-                src: '/picture/Chicago/6319f4b96e4ea35b92a1a2a7f32fd83b.jpg',
+                src: 'picture/Chicago/6319f4b96e4ea35b92a1a2a7f32fd83b.jpg',
                 title: 'A City in Layers',
                 description: 'Buildings, bridges, and people meet on one plane.',
             },
             {
-                src: '/picture/Chicago/552aa6dd833e1150059cbe533dca3dd8.jpg',
+                src: 'picture/Chicago/552aa6dd833e1150059cbe533dca3dd8.jpg',
                 title: 'Lakefront Weather',
                 description: 'Wind comes off the lake and softens the edge of the city.',
             },
@@ -39,7 +39,7 @@ const collections = [
         note: 'Time moves slower in the mountains',
         photos: [
             {
-                src: '/picture/Hunnan/99d6b7b8eb79f78bae5b6d41c310741e.jpg',
+                src: 'picture/Hunnan/99d6b7b8eb79f78bae5b6d41c310741e.jpg',
                 title: 'Mist Over Wulingyuan',
                 description: 'Before the morning mist lifts, the peaks seem to rise through paper.',
             },
@@ -52,37 +52,37 @@ const collections = [
         note: 'Volcanoes, sea air, and first light',
         photos: [
             {
-                src: '/picture/%E5%8D%B0%E5%B0%BC/f534b6f0387027fe4b9366a15e5f37b6.jpg',
+                src: 'picture/%E5%8D%B0%E5%B0%BC/f534b6f0387027fe4b9366a15e5f37b6.jpg',
                 title: 'First Light on Bromo',
                 description: 'The sun clears the crater and touches the ash still asleep below.',
             },
             {
-                src: '/picture/%E5%8D%B0%E5%B0%BC/24d319595703e1153fe13169540cb989.jpg',
+                src: 'picture/%E5%8D%B0%E5%B0%BC/24d319595703e1153fe13169540cb989.jpg',
                 title: 'The Long Way Up',
                 description: 'Before climbing, let your eyes and footsteps adjust to the dark.',
             },
             {
-                src: '/picture/%E5%8D%B0%E5%B0%BC/804c574cf573c889f07f6b8952afb971.jpg',
+                src: 'picture/%E5%8D%B0%E5%B0%BC/804c574cf573c889f07f6b8952afb971.jpg',
                 title: 'Ash and Blue',
                 description: 'A blue hour sky and ash moving in the wind.',
             },
             {
-                src: '/picture/%E5%8D%B0%E5%B0%BC/978b674412e389907a1065050f30f83e.jpg',
+                src: 'picture/%E5%8D%B0%E5%B0%BC/978b674412e389907a1065050f30f83e.jpg',
                 title: 'Edges of the Crater',
                 description: 'The edge of the earth, measured against a standing person.',
             },
             {
-                src: '/picture/%E5%8D%B0%E5%B0%BC/488262fecb8a8b9df08af15aca55cddd.jpg',
+                src: 'picture/%E5%8D%B0%E5%B0%BC/488262fecb8a8b9df08af15aca55cddd.jpg',
                 title: 'Before the Crowd',
                 description: 'The valley is still quiet before the crowds arrive.',
             },
             {
-                src: '/picture/%E5%8D%B0%E5%B0%BC/c8dd2d0c94541268594836675c17ed89.jpg',
+                src: 'picture/%E5%8D%B0%E5%B0%BC/c8dd2d0c94541268594836675c17ed89.jpg',
                 title: 'A Small Horizon',
                 description: 'The farther the view, the less urgent the road feels.',
             },
             {
-                src: '/picture/%E5%8D%B0%E5%B0%BC/ddf88d12073da56a7da1e2752613fc70.jpg',
+                src: 'picture/%E5%8D%B0%E5%B0%BC/ddf88d12073da56a7da1e2752613fc70.jpg',
                 title: 'Volcanic Silence',
                 description: 'Silence is not empty. It has color and weight.',
             },
